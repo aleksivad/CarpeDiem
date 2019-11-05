@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-sm-3 box">
+            <div class="text first-line">{{ currentDate | date: "HH:mm" }}</div>
+            <div class="text">{{ currentDate | date: "dd.MM.yyyy" }}</div>
+        </div>
+        <div class="col-sm-2">
+            <div class="img-div"><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" /></div>
+            <div class="text img-desc"> {{description}}</div>
+        </div>
+        <div class="col-sm-2 box">
+            <div class="text first-line">
+                {{currentTemp}}℃
+            </div>
+            <div class="text">Тренутна <br> температура</div>
+        </div>
+        <div class="col-sm-2 box">
+            <div class="text first-line">
+                {{minTemp}}℃
+            </div>
+            <div class="text">Минимална <br> температура</div>
+        </div>
+        <div class="col-sm-3 box">
+            <div class="text first-line">
+                {{maxTemp}}℃
+            </div>
+            <div class="text">Максимална <br> температура</div>
+        </div>
+    </div>
+</div>

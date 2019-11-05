@@ -1,0 +1,7 @@
+<fieldset>
+    <legend class="title">Измјени категорију {{ category.categoryName }}</legend>
+    <p>{{ category.categoryName }}</p>
+    <input type="text" placeholder="Novi naziv" value="{{ category.categoryName }}" #name>
+    <button class="btn btn-primary dugme" type="button" (click)="close()">Одбаци</button>
+    <button class="btn btn-primary dugme" type="submit" (click)="save(name.value)">Сачувај</button>
+</fieldset> 

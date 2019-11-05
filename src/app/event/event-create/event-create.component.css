@@ -1,0 +1,16 @@
+.create-form {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+}
+.title {
+    background-color:  #032138;
+    color: white;
+    font-family: fantasy;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+.bttn {
+    margin-left: 20px;
+}

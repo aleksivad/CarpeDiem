@@ -1,0 +1,68 @@
+.app-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.menu-container {
+    width: 300px;
+}
+.menu {
+    background-color: #032138;
+    height: 100vh;
+    overflow: hidden;
+}
+.box {
+    height: 390px;
+}
+.menu-item {
+    color: white !important;
+    font-size: 25px;
+    cursor: pointer;
+}
+.page {
+    background-color: #cfdae3;
+    overflow: hidden;
+}
+.naslov {
+    height: 150px;
+    background-image: url('../../../assets/heder.jpg');
+    color: white;
+}
+.app-title {
+    padding-left: 16px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.events {
+    margin: 20px;
+}
+.all-events {
+    height: 100vh;
+}
+
+.banner {
+    position: absolute; 
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 30%;
+}
+.first-menu-item {
+    color: white;
+}
+.first-menu-item:hover {
+    cursor: pointer;
+}
+.menu-item:hover {
+    background-color: rgb(88, 139, 174);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu-item:active {
+    background-color: rgb(88, 139, 174);
+    color: black;
+}

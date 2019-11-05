@@ -1,0 +1,36 @@
+.box {
+    margin-top: 0;
+}
+.title {
+    font-size: 50px;
+    font-style: italic;
+    color: rgb(88, 139, 174);
+    text-align: center;
+    font-family: fantasy;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+img {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(88, 139, 174);
+  }
+  
+  .item {
+    background-color: #f1f1f1;
+    width: 50%;
+    height: 15%;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid #cfdae3;
+    border-radius: 10px 0px;
+  }
+  .bttn {
+      margin: 20px;
+  }

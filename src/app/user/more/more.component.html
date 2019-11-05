@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+    <div class="box">
+        <h1 class="title">{{event.eventName}}</h1>
+        <div class="flex-container">
+            <div class="item">
+                <p>{{event.dueDate | date: 'dd.MM.yyyy'}}, {{ event.place }}</p>
+                <p> у {{ event.eventTime }}</p>
+                <p>{{ event.eventDescription }}</p>
+            </div>
+            <div>
+                <img src="{{ event.eventImage }}" alt="slika">
+            </div>
+        </div>
+        <button class="btn btn-primary bttn" (click)="close()">Затвори</button>
+    </div>
+</div>

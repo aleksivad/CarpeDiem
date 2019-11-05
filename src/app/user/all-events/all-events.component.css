@@ -1,0 +1,97 @@
+.scrollable-div {
+    overflow-y: scroll;
+    height:calc(100vh - 350px);
+}
+.select-field {
+    width: 30%;
+    border: 1px solid #cfdae3;
+    background-color: #032138;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 0px 30px 0px 0px;
+}
+
+.data-picker {
+    width: 30%;
+    border: 1px solid #cfdae3;
+    background-color: #032138;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 30px 0px 0px 0px;
+}
+
+.option {
+    border: 1px solid #cfdae3 ;
+    background-color: white !important;
+    height: 42px;
+    border-bottom: 2px solid #032138;
+}
+.piker {
+    background-color: white;
+    margin-bottom: 0px;
+}
+.naziv-selekta {
+    color: white;
+    font-size: 22px;
+    margin: 5px;
+}
+.naziv-datum-selekta{
+    text-align: right;
+}
+.title {
+    font-size: 50px;
+    font-style: italic;
+    color: rgb(88, 139, 174);
+    text-align: center;
+    font-family: fantasy;
+    position: relative;
+    padding: 20px;
+    text-shadow: 3px 3px 6px grey;
+}
+  
+.flex-container-first {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sort-button {
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: #032138;
+    color: white;
+    border-radius: 10px;
+    width: 20%;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(88, 139, 174);
+  }
+  
+  .item {
+    background-color: #f1f1f1;
+    width: 31%;
+    height: 22%;
+    margin: 10px;
+    font-size: 30px;
+    border: 1px solid #cfdae3;
+    border-radius: 10px 0px;
+  }
+  .item:hover {
+      width: 32%;
+      height: 25%;
+      background-color:#cfdae3 ;
+  }
+  mat-icon {
+    float: left;
+    font-size: 50px;
+    color: #032138;
+  }
+  mat-icon:hover{
+    cursor: pointer;
+  }

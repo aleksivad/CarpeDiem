@@ -1,0 +1,51 @@
+<div>
+    <div class="dashboard-column ">
+        <mat-card class="dashboard-card scrollable-div">
+                
+            <h1 class="title"><mat-icon (click)="initialize()">refresh</mat-icon>Најаве будућих дешавања у Бањалуци</h1>
+            <mat-card-content>
+                <div class="flex-container-first">
+                    <div class="select-field">
+                        <h4 class="naziv-selekta">Претражи догађаје по категорији</h4>
+                        <mat-select class="option" (selectionChange)="onCategoryChange($event)">
+                            <mat-option class="option" *ngFor="let category of categories" [value]="category">
+                                {{category.categoryName}}
+                            </mat-option>
+                        </mat-select>
+                    </div>
+                    <button class="sort-button" (click)="sortFunction()">
+                        <h4>Сортирај по датуму</h4>
+                    </button>
+                    <div class="data-picker">
+                        <h4 class="naziv-selekta naziv-datum-selekta">Претражи догађаје по датуму</h4>
+                        <div class="piker">
+                            <input matInput [matDatepicker]="picker" placeholder="Датум"
+                                (dateChange)="onDateChange($event)">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="allEvents.length==0">
+                    Нема дешавања у будућем периоду
+                </div>
+
+                <mat-list class="flex-container" role="list">
+                    <mat-list-item class="item" role="listitem" *ngFor="let event of filteredEvents">
+                        <h3 matLine>{{event.eventName}} </h3>
+                        <p matLine>
+                            <span> {{event.dueDate | date: 'dd.MM.yyyy'}} </span>
+                        </p>
+                        <p matLine>
+                            <span> {{event.eventDescription}} </span>
+                        </p>
+                        <button class="btn btn-primary" (click)="more(event)">
+                            Опширније
+                        </button>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

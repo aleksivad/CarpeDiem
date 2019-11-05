@@ -1,0 +1,36 @@
+/* .app-container {
+
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu-container {
+    width: 400px;
+}
+
+.app-title{
+    padding-left: 16px; 
+}
+
+.menu {
+    height: calc(100vh - 72px);
+}
+
+.menu-item {
+    color: black !important;
+}
+
+.menu-item:hover {
+    background-color: rgb(111, 105, 126);
+    color: white !important;
+    cursor: pointer;
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+} */
+

@@ -1,0 +1,46 @@
+<h1 class="title">Нови догађај</h1>
+<form [(formGroup)]="form">
+  <div mat-dialog-content class="create-form">
+
+    <mat-form-field>
+      <input matInput placeholder="Назив" required formControlName="eventName" autocomplete="off" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Опис" formControlName="eventDescription" autocomplete="off" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Мјесто" formControlName="place" autocomplete="off" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Вријеме" formControlName="eventTime" autocomplete="off" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Датум" required formControlName="dueDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Категорија догађаја</mat-label>
+      <mat-select formControlName="eventCategory">
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{category.categoryName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Фотографија" formControlName="eventImage" autocomplete="off" />
+      </mat-form-field>
+
+  </div>
+
+  <div mat-dialog-actions>
+    <button class="btn btn-primary bttn" (click)="close()">Одустани</button>
+    <button class="btn btn-primary bttn" [disabled]="form.invalid" type="submit" (click)="save(form)">Сачувај</button>
+  </div>
+</form>

@@ -1,0 +1,11 @@
+.title {
+    background-color:  #032138;
+    color: white;
+    font-family: fantasy;
+    font-style: italic;
+    text-align: center;
+}
+
+.dugme {
+    margin-left: 15px;
+}

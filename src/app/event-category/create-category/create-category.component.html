@@ -1,0 +1,16 @@
+<h1 mat-dialog-title class="title">Нова категорија</h1>
+<form [(formGroup)]="form">
+  <div mat-dialog-content class="create-form">
+    <mat-form-field>
+      <input matInput placeholder="Naziv" formControlName="categoryName" autocomplete="off" />
+    </mat-form-field>
+
+  </div>
+
+  <div class="dugme" mat-dialog-actions>
+    <button class="btn btn-primary " mat-button (click)="close()">Одустани</button>
+    <button class="btn btn-primary bttn" mat-button [disabled]="form.invalid" type="submit" (click)="save(form)">Сачувај</button>
+  </div>
+
+</form>
+

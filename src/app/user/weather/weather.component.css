@@ -1,0 +1,28 @@
+.container-fluid {
+    background-color: rgb(88, 139, 174);
+}
+
+.text {
+    color: white;
+    text-align: center;
+}
+
+.first-line {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.box {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.img-div {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.img-desc {
+    margin-bottom: 45px;
+}

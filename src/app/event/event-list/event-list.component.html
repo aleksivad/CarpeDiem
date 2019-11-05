@@ -1,0 +1,85 @@
+<mat-sidenav-container class="app-container">
+    <mat-sidenav [(opened)]="opened" mode="side" class="menu-container">
+        <mat-list class="menu">
+            <div class="box"></div>
+            <mat-list-item class="menu-item" routerLink="/user">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <p>Почетна</p>
+            </mat-list-item>
+
+            <mat-list-item class="menu-item" routerLink="/category">
+                <mat-icon mat-list-icon>today</mat-icon>
+                <p>Категорије</p>
+            </mat-list-item>
+            <mat-list-item class="menu-item" routerLink="/user">
+                <p>Одјави се</p>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="page">
+        <mat-toolbar>
+            <mat-toolbar-row class="naslov">
+                <button mat-icon-button (click)="toggleMenu()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <h3 class="app-title"><em>Carpe diem</em></h3>
+            </mat-toolbar-row>
+            <mat-toolbar-row class="module-naslov">
+                <h3 class="module-title">Преглед свих догађаја</h3>
+                <button mat-icon-button (click)="addEvent()" class="right-button">
+                    <mat-icon class="add-icon">add</mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 kontejner">
+            <ng-container matColumnDef="eventName">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Наслов </th>
+                <td mat-cell *matCellDef="let element" [ngClass]="{'my-class': !element.active}" class="table-content"> {{ element.eventName }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dueDate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Датум </th>
+                <td mat-cell *matCellDef="let element" [ngClass]="{'my-class': !element.active}" class="table-content"> {{ element.dueDate | date:'dd.MM.yyyy' }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="eventTime">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Вријеме </th>
+                <td mat-cell *matCellDef="let element" [ngClass]="{'my-class': !element.active}" class="table-content time"> {{ element.eventTime }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="place">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Мјесто </th>
+                <td mat-cell *matCellDef="let element" [ngClass]="{'my-class': !element.active}" class="table-content"> {{ element.place }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="eventCategory">
+                <th mat-header-cell *matHeaderCellDef>
+                    <div class="header-button">
+                        Категорија
+                        <button mat-icon-button routerLink="/category" class='add-event-category'>
+                            <mat-icon class="add-icon">add</mat-icon>
+                        </button>
+                        <span mat-sort-header></span>
+
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element" [ngClass]="{'my-class': !element.active}" class="table-content"> {{ element.eventCategory?.categoryName }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="close">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button (click)="closeEvent(element)">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

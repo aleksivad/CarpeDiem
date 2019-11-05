@@ -1,0 +1,28 @@
+<div class="dashboard-container">
+    <div class="dashboard-column">
+        <mat-card class="dashboard-card scrolable-div">
+
+            <h3 class="title">Бањалука данас...</h3>
+
+            <mat-card-content>
+                <div *ngIf="todayEvents.length==0">
+                    Нема најављених дешавања на данашњи дан
+                </div>
+                <mat-list class="flex-container" role="list">
+                    <mat-list-item class="item" role="listitem" *ngFor="let event of todayEvents">
+                        <h3 matLine>{{event.eventName}}</h3>
+                        <p matLine>
+                            <span> {{event.eventDescription}} </span>
+                        </p>
+                        <p matLine>
+                            <span> {{event.eventCategory.categoryName}} </span>
+                        </p>
+                        <button class="btn btn-primary" (click)="more(event)">
+                            Опширније
+                        </button>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

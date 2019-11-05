@@ -1,0 +1,107 @@
+table {
+    width: 100%;   
+    position: absolute;
+    top: 220px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-button {
+    position: absolute;
+    right: 10px;
+}
+
+.header-button {
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-button {
+    position: absolute;
+    right: 10px;
+}
+.add-icon {
+    font-weight: bold;
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.navigate-button {
+    width: 150px;
+    background-color: lightblue;
+    border-radius:5px;
+    height: 50px;
+    margin: 10px;
+    font-style: italic;
+    font-size: 25px;
+}
+.table-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+.table-content {
+    font-size: 20px;
+}
+.box {
+    height: 150px;
+}
+.app-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.menu-container {
+    width: 200px;
+}
+.app-title {
+    padding-left: 16px;
+    font-size: 60px;
+    font-weight: bold;
+}
+.menu {
+    background-color: #032138/*  rgb(0, 49, 82) */;
+    height: calc(100vh);
+}
+.page {
+    background-color: #cfdae3;
+    overflow-x: hidden;
+}
+
+.menu-item {
+    color: white !important;
+    font-size: 25px;
+}
+.menu-item:hover {
+    background-color: rgb(88, 139, 174);
+    color: black !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+.naslov {
+    height: 150px;
+    background-image: url('../../../assets/heder.jpg');
+    color: white;
+}
+.module-naslov {
+    height: 80px;
+    background-color:  rgb(88, 139, 174);
+    color: white;
+}
+.module-title {
+    font-weight: bold;
+    font-size: 30px;
+}
+.my-class {
+    color: grey;
+}
+.time {
+    text-align: justify;
+}

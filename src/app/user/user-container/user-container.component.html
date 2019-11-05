@@ -1,0 +1,46 @@
+<mat-sidenav-container class="app-container">
+    <mat-sidenav [(opened)]="opened" mode="side" class="menu-container">
+        <mat-list class="menu">
+            <mat-list-item class="first-menu-item" routerLink="/auth">
+                <p>Администратор</p>
+            </mat-list-item>
+            <div class="box">
+                <img src="../../../assets/blue.png" height="400px" alt="Blue flower">
+            </div>
+
+            <mat-list-item class="menu-item" routerLink="all-events">
+                <mat-icon mat-list-icon>date_range</mat-icon>
+                <p>Сви догађаји</p>
+            </mat-list-item>
+
+            <mat-list-item class="menu-item" routerLink="today">
+                <mat-icon mat-list-icon>today</mat-icon>
+                <p>Бањалука данас</p>
+            </mat-list-item>
+
+
+            <div class="banner">
+                <app-banner></app-banner>
+            </div>
+
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="page">
+        <mat-toolbar>
+            <mat-toolbar-row class="naslov">
+                <button mat-icon-button (click)="toggleMenu()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <h3 class="app-title"><em>Carpe diem</em></h3>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <div>
+            <app-weather></app-weather>
+        </div>
+        <div class="conteiner-fluid events">
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
