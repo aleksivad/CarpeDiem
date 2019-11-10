@@ -4,6 +4,7 @@ import { CategoryService } from '../category.service';
 import { MatDialog, MatTableDataSource, MatSort } from '@angular/material';
 import { CreateCategoryComponent } from '../create-category/create-category.component';
 import { EditCategoryComponent } from '../edit-category/edit-category.component';
+import { DeleteCategoryComponent } from '../delete-category/delete-category.component';
 
 @Component({
   selector: 'app-category-list',
@@ -50,6 +51,20 @@ export class CategoryListComponent implements OnInit {
         this.dataSource.data = this.service.getCategory();
       });
   }
+
+  deleteCategory(element) {
+    this.dialog.open(DeleteCategoryComponent, {
+      width: '600px',
+      data: {
+        category: element
+      }
+    })
+      .afterClosed()
+      .subscribe(result => {
+        this.dataSource.data = this.service.getCategory();
+      });
+  }
+
   toggleMenu() {
     this.opened = !this.opened;
   }

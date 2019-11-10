@@ -7,13 +7,15 @@ import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { AppMaterialModule } from '../app-material/app-material.module';
 import {MatInputModule} from '@angular/material';
+import { DeleteCategoryComponent } from './delete-category/delete-category.component';
 
 
 @NgModule({
   declarations: [
     CreateCategoryComponent, 
     EditCategoryComponent, 
-    CategoryListComponent
+    CategoryListComponent, 
+    DeleteCategoryComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import {MatInputModule} from '@angular/material';
   ],
   entryComponents: [
     CreateCategoryComponent,
-    EditCategoryComponent
+    EditCategoryComponent, 
+    DeleteCategoryComponent
   ],
   providers: [],
   bootstrap: []

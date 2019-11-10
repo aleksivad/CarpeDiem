@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Category } from './model/category.model';
 import { EventService } from '../event/event.service';
+import { MatTableDataSource } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
+  dataSource = new MatTableDataSource<Category>();
   private data: Array<Category> = [];
   private STORAGE_KEY: string = "category-list";
 
@@ -54,4 +56,16 @@ export class CategoryService {
     })
     this.eventservice.saveToLocalStorage()
   }  
+
+  public deleteCategory(id:number){
+    let index =- 1;
+    this.data.forEach((item,i) => {
+      if(id == item.id){
+        index = i
+      }
+    });
+      this.data.splice(index, 1);
+      this.dataSource = new MatTableDataSource<Category>(this.data);
+    this.saveToLocalStorage();
+  }
 }

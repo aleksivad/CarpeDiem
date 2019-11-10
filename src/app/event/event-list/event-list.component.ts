@@ -51,6 +51,7 @@ export class EventListComponent implements OnInit {
       .subscribe(result => {
         this.dataSource.data = this.service.getEvents();
       });
+      console.log(event);
   }
   
   toggleMenu() {
